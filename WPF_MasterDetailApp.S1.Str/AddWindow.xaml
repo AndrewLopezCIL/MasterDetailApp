@@ -1,0 +1,48 @@
+﻿<Window x:Class="WPF_MasterDetailApp.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_MasterDetailApp"
+        mc:Ignorable="d"
+        Title="AddWindow" Height="466.189" Width="362.9">
+    <Window.Resources>
+        <Style x:Key="Textboxes" TargetType="TextBox">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Padding" Value="5,1,1,0"/>
+        </Style>
+        <Style x:Key="TextBoxLabels" TargetType="Label"> 
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="GameCompanyName" Content="Company Name" Style="{StaticResource TextBoxLabels}"/>
+        <TextBox Grid.Row="0" Style="{StaticResource Textboxes}" Margin="102,32,103,10"/>
+        <Label x:Name="GameTitle" Grid.Row="1" Content="Game Title" Style="{StaticResource TextBoxLabels}"/>
+
+        <TextBox Grid.Row="1" Style="{StaticResource Textboxes}"/>
+        <Label x:Name="GameDescription" Grid.Row="2" Content="Game Description" Style="{StaticResource TextBoxLabels}"/>
+
+        <TextBox Grid.Row="2" Style="{StaticResource Textboxes}"/>
+        <Label x:Name="GameReleaseDate" Grid.Row="3" Content="Release Date of Game" Style="{StaticResource TextBoxLabels}"/>
+
+        <TextBox Grid.Row="3" Style="{StaticResource Textboxes}"/>
+        <Label x:Name="GamePlayerAmount" Grid.Row="4" Content="Playerbase Size" Style="{StaticResource TextBoxLabels}"/>
+
+        <TextBox Grid.Row="4" Style="{StaticResource Textboxes}"/>
+        <Label x:Name="GamePrice" Grid.Row="5" Content="Price of Game" Style="{StaticResource TextBoxLabels}"/>
+        
+        <TextBox Grid.Row="5" Style="{StaticResource Textboxes}"/>
+        
+    </Grid>
+</Window>
